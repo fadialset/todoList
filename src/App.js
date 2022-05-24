@@ -7,10 +7,15 @@ function App() {
   const [todos, setTodos] = useState([])
   return (
     <div className='App'>
-      <header>
-        <Form todos={todos} setTodos={setTodos} inputText={inputText} setInputText={setInputText}/>
-        <TodoList />
-      </header>
+      <header>My Todo list</header>
+
+      <Form
+        todos={todos}
+        setTodos={setTodos}
+        inputText={inputText}
+        setInputText={setInputText}
+      />
+      <TodoList setTodos={setTodos} todos={todos} />
     </div>
   )
 }
